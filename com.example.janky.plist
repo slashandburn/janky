@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>EnvironmentVariables</key>
+  <dict>
+      <key>PATH</key>
+      <string>/Users/_deploy/.rbenv/shims:/Users/_deploy/.rbenv/bin:.bundle/binstubs:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</string>
+      <key>JANKY_BASE_URL</key>
+      <string>xxhttp://janky.example.com/xx</string>
+      <key>JANKY_BUILDER_DEFAULT</key>
+      <string>xxhttp://localhost:8080/xx</string>
+      <key>JANKY_HUBOT_USER</key>
+      <string>hubot</string>
+      <key>JANKY_HUBOT_PASSWORD</key>
+      <string>xxHubotPasswordxx</string>
+      <key>JANKY_CONFIG_DIR</key>
+      <string>xx/usr/local/var/www/janky.example.com/current/configxx</string>
+      <key>JANKY_GITHUB_USER</key>
+      <string>xxGITHUB_USERNAMExx</string>
+      <key>JANKY_GITHUB_PASSWORD</key>
+      <string>xxPASSWORDxx</string>
+      <key>JANKY_GITHUB_HOOK_SECRET</key>
+      <string>xxSECRETxx</string>
+      <key>JANKY_GITHUB_STATUS_TOKEN</key>
+      <string>xxSECRET_STATUS_TOKENxx</string>
+      <key>JANKY_CHAT</key>
+      <string>hipchat</string>
+      <key>JANKY_CHAT_HIPCHAT_FROM</key>
+      <string>Hubot CI</string>
+      <key>JANKY_CHAT_DEFAULT_ROOM</key>
+      <string>Builds</string>
+      <key>JANKY_CHAT_HIPCHAT_TOKEN</key>
+      <string>xxHIPCHAT_TOKEN</string>
+      <key>RACK_ENV</key>
+      <string>production</string>
+      <key>DATABASE_URL</key>
+      <string>postgres://janky:xxJANKY_DB_PASSWORD@localhost:5432/janky</string>
+  </dict>
+  <key>Label</key>
+  <string>com.example.janky</string>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ProgramArguments</key>
+  <array>
+        <string>bundle</string>
+        <string>exec</string>
+        <string>rackup</string>
+        <string>config.ru</string>
+        <string>-p</string>
+        <string>3040</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/usr/local/var/www/janky.example.com/current</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/usr/local/var/www/janky.example.com/janky_application.out</string>
+  <key>StandardErrorPath</key>
+  <string>/usr/local/var/www/janky.example.com/janky_application.err</string>
+  <key>Debug</key>
+  <true/>
+  <key>UserName</key>
+  <string>_deploy</string>
+</dict>
+</plist>
